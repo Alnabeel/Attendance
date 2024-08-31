@@ -1,0 +1,44 @@
+.App {
+  display: flex;
+}
+
+.navbar {
+  width: 200px;
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 15px 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
