@@ -1,11 +1,10 @@
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Box, IconButton, List, ListItem, ListItemText, SwipeableDrawer, Toolbar, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import CreateEmployee from './components/CreateEmployee';
 import EmployeeList from './components/EmployeeList';
-import Dashboard from './components/Dashboard'; // Import the new Dashboard component
-import { AppBar, Toolbar, Typography, Box, SwipeableDrawer, List, ListItem, ListItemText, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import DataTable from './components/Report';
 
 function App() {
@@ -55,9 +54,6 @@ function App() {
             <ListItem button component={Link} to="/create" onClick={handleDrawerToggle}>
               <ListItemText primary="Create Employee" />
             </ListItem>
-            <ListItem button component={Link} to="/dashboard" onClick={handleDrawerToggle}>
-              <ListItemText primary="Dashboard" />
-            </ListItem>
             <ListItem button component={Link} to="/report" onClick={handleDrawerToggle}>
               <ListItemText primary="Report" />
             </ListItem>
@@ -77,7 +73,6 @@ function App() {
           <Routes>
             <Route path="/create" element={<CreateEmployee />} />
             <Route path="/" element={<EmployeeList />} />
-            <Route path="/dashboard" element={<Dashboard />} /> {/* Add route for Dashboard */}
             <Route path="/report" element={<DataTable />} /> {/* Add route for Dashboard */}
           </Routes>
         </Box>
