@@ -2,7 +2,7 @@ import { Box, Button, TextField, Typography } from '@mui/material';
 import { Client, Databases, Query } from 'appwrite';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+ 
 function CreateEmployee() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
